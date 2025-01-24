@@ -109,27 +109,39 @@ header .logo img {
 .faq {
   background: #ffecb3;
   padding: 3em 1em;
+  text-align: center; /* Center-align the section */
+  max-width: 800px; /* Limit width for better alignment on desktop */
+  margin: 0 auto; /* Center the FAQ section horizontally */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visual distinction */
+  border-radius: 8px; /* Optional: Add rounded corners for a softer look */
+  margin-bottom: 3.5em;
 }
 
 .faq .section-title {
   font-size: 1.8em;
   margin-bottom: 1em;
   text-align: center;
+  color: #333; /* Adjusted color for better readability */
 }
 
 .faq-item {
   margin-bottom: 1.5em;
+  text-align: left; /* Keep FAQ items left-aligned for readability */
+  margin-left: auto; /* Align items within the centered container */
+  margin-right: auto;
 }
 
 .faq-question {
   font-size: 1.2em;
   font-weight: bold;
+  color: #444; /* Adjusted for consistency */
 }
 
 .faq-answer {
   font-size: 1em;
   margin-top: 0.5em;
   color: #666;
+  line-height: 1.6; /* Improve readability with better spacing */
 }
 
 /* Footer */
@@ -224,5 +236,18 @@ footer a:hover {
 
   .hero-text {
     font-size: 0.9em;
+  }
+
+  .faq {
+    padding: 2em 1em; /* Adjust padding for smaller screens */
+    max-width: 90%; /* Ensure the section fits well on mobile devices */
+  }
+
+  .faq .section-title {
+    font-size: 1.5em; /* Scale down title size for smaller screens */
+  }
+
+  .faq-answer {
+    font-size: 0.9em; /* Slightly smaller text for answers on mobile */
   }
 }
