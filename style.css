@@ -156,6 +156,31 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em; /* Space between the icons */
+  margin-top: 1em;
+}
+
+.social-links a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.social-icon {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px; /* Add slight rounding for consistency */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+
 /* Duck Effect */
 .duck {
   position: absolute;
