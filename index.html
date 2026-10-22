@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>*uck Donald Trump T-Shirt | $5 a Shirt to Democracy Forward</title>
-<meta name="description" content="The *uck Donald Trump tee: a rubber duck with a very specific haircut, in white, yellow, or orange. $5 from every shirt goes to Democracy Forward.">
+<meta name="description" content="The *uck Donald Trump tee: a rubber duck with a very specific haircut on a heavyweight Comfort Colors shirt. Two designs, $32 and $38. $5 from every shirt goes to Democracy Forward.">
 <meta name="author" content="Duck Donald Trump">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://duckdonaldtrump.com/">
@@ -12,18 +12,18 @@
 <meta property="og:site_name" content="Duck Donald Trump">
 <meta property="og:url" content="https://duckdonaldtrump.com/">
 <meta property="og:title" content="*uck Donald Trump">
-<meta property="og:description" content="Make quacks, not chaos. The duck shirt in white, yellow, and orange. $5 from every shirt goes to Democracy Forward.">
+<meta property="og:description" content="Make quacks, not chaos. Two heavyweight duck tees, $32 and $38. $5 from every shirt goes to Democracy Forward.">
 <meta property="og:image" content="https://duckdonaldtrump.com/images/og-duck-shirts.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Three people wearing the *uck Donald Trump duck shirt">
+<meta property="og:image:alt" content="The two *uck Donald Trump duck tees, front and back">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@_uckTrump">
 <meta name="twitter:title" content="*uck Donald Trump">
 <meta name="twitter:description" content="Make quacks, not chaos. $5 from every shirt goes to Democracy Forward.">
 <meta name="twitter:image" content="https://duckdonaldtrump.com/images/og-duck-shirts.jpg">
-<meta name="twitter:image:alt" content="Three people wearing the *uck Donald Trump duck shirt">
+<meta name="twitter:image:alt" content="The two *uck Donald Trump duck tees, front and back">
 <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <meta name="theme-color" content="#111111">
@@ -52,12 +52,23 @@
     },
     {
       "@type": "Product",
-      "name": "*uck Donald Trump T-Shirt",
-      "image": ["https://duckdonaldtrump.com/images/og-duck-shirts.jpg", "https://duckdonaldtrump.com/images/duck-logo.webp"],
-      "description": "Unisex T-shirt with a cartoon rubber duck wearing a familiar orange combover. Available in White, Yellow, and Orange. $5 from every shirt goes to Democracy Forward Foundation.",
+      "name": "*uck Donald Trump Tee (Big Stencil)",
+      "image": "https://duckdonaldtrump.com/images/tee-big-stencil-front-1000.webp",
+      "description": "Heavyweight Comfort Colors 1717 tee with a large stencil *UCK, DONALD TRUMP, and the duck with the orange combover. Terracotta, Butter, or White. $5 from every shirt goes to Democracy Forward Foundation.",
       "brand": {"@id": "https://duckdonaldtrump.com/#org"},
-      "color": "White, Yellow, Orange",
-      "url": "https://duckdonaldtrump.printful.me/product/uck-donald-trump-t-shirt"
+      "color": "Terracotta, Butter, White",
+      "material": "100% ring-spun cotton",
+      "offers": {"@type": "Offer", "url": "https://duckdonaldtrump.printful.me/product/unisex-garment-dyed-heavyweight-t-shirt", "price": "32.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}
+    },
+    {
+      "@type": "Product",
+      "name": "*uck Donald Trump Tee (Front and Back)",
+      "image": "https://duckdonaldtrump.com/images/tee-front-back-back-1000.webp",
+      "description": "Heavyweight Comfort Colors 1717 tee with a small duck on the left chest and *UCK DONALD TRUMP stacked in stencil on the back. Terracotta, Butter, or White. $5 from every shirt goes to Democracy Forward Foundation.",
+      "brand": {"@id": "https://duckdonaldtrump.com/#org"},
+      "color": "Terracotta, Butter, White",
+      "material": "100% ring-spun cotton",
+      "offers": {"@type": "Offer", "url": "https://duckdonaldtrump.printful.me/product/uck-donald-trump-tee-front-and-back", "price": "38.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}
     },
     {
       "@type": "FAQPage",
@@ -221,6 +232,12 @@ a{color:inherit}
 .specs li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule)}
 .swatches{display:flex;gap:6px}
 .swatches b{width:20px;height:20px;border:1px solid var(--ink);display:inline-block}
+.product--flip{padding-top:0}
+.product--flip .p-img{grid-column:6 / span 7}
+.product--flip .p-copy{grid-column:1 / span 4;grid-row:1}
+.product--flip .p-img::before{inset:9% 12% -7% -6%}
+.p-inset{position:absolute;z-index:2;left:-4%;bottom:-6%;width:36%;border:2px solid var(--ink);background:#fff;transform:rotate(-4deg)}
+.p-inset img{width:100%}
 .block-link{
   display:block;text-align:center;text-decoration:none;
   background:var(--ink);color:var(--duck);
@@ -233,6 +250,9 @@ a{color:inherit}
 .block-link:active{transform:translate(7px,7px);box-shadow:0 0 0 var(--hazard)}
 @media (max-width:860px){
   .p-img,.p-copy{grid-column:1 / -1}
+  .product--flip .p-img{grid-column:1 / -1}
+  .product--flip .p-copy{grid-column:1 / -1;grid-row:auto}
+  .product--flip .p-img::before{inset:8% 10% -5% 0}
   .p-img::before{inset:8% 0 -5% 10%}
   .p-copy{padding-top:56px}
 }
@@ -307,10 +327,10 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
   <div class="bar">
     <a href="#top" class="label">Duck Donald Trump</a>
     <nav class="label">
-      <a href="#shirt">The shirt</a>
+      <a href="#shirt">The shirts</a>
       <a href="#why">Why</a>
       <a href="#faq">FAQ</a>
-      <a class="shop" href="https://duckdonaldtrump.printful.me/product/uck-donald-trump-t-shirt">Shop</a>
+      <a class="shop" href="https://duckdonaldtrump.printful.me/">Shop</a>
     </nav>
   </div>
 </header>
@@ -328,13 +348,13 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
     </div>
     <div class="hero-foot">
       <p>Make quacks, not chaos. A shirt for people who would rather laugh at him than yell about him.</p>
-      <a class="go" href="#shirt">Get the shirt</a>
+      <a class="go" href="#shirt">Get a shirt</a>
     </div>
   </section>
 
   <div class="tape-zone" aria-hidden="true">
     <div class="tape a"><div class="track">
-      <i>Make quacks not chaos</i>✶<i>Duck? Something stronger? Your call</i>✶<i>White / Yellow / Orange</i>✶<i>Make quacks not chaos</i>✶<i>Duck? Something stronger? Your call</i>✶<i>White / Yellow / Orange</i>✶
+      <i>Make quacks not chaos</i>✶<i>Duck? Something stronger? Your call</i>✶<i>Terracotta / Butter / White</i>✶<i>Make quacks not chaos</i>✶<i>Duck? Something stronger? Your call</i>✶<i>Terracotta / Butter / White</i>✶
     </div></div>
     <div class="tape b"><div class="track">
       <i>The duck stops here</i>✶<i>$5 a shirt to Democracy Forward</i>✶<i>Quack responsibly</i>✶<i>The duck stops here</i>✶<i>$5 a shirt to Democracy Forward</i>✶<i>Quack responsibly</i>✶
@@ -344,27 +364,49 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
   <section class="product wrap" id="shirt">
     <div class="p-grid">
       <div class="p-img">
-        <picture><source type="image/webp" srcset="images/duck-shirts-800.webp 800w, images/duck-shirts.webp 1400w" sizes="(max-width: 860px) 100vw, 58vw"><img src="images/Duck%20Shirts.png" alt="Three people wearing the *uck Donald Trump T-shirt in orange, yellow, and white" width="1400" height="788" loading="lazy" decoding="async"></picture>
+        <picture><source type="image/webp" srcset="images/tee-big-stencil-front-600.webp 600w, images/tee-big-stencil-front-1000.webp 1000w" sizes="(max-width: 860px) 100vw, 58vw"><img src="images/tee-big-stencil-front-1000.webp" alt="Terracotta heavyweight tee with a large stencil *UCK, DONALD TRUMP under it, and the duck sticker breaking out of the K" width="1000" height="1000" loading="lazy" decoding="async"></picture>
       </div>
       <div class="p-copy">
-        <span class="label">01 / The shirt</span>
-        <h2>This duck means business.</h2>
-        <p>A rubber duck with a very specific haircut. You know the one.</p>
+        <span class="label">01 / The loud one</span>
+        <h2>Big stencil.</h2>
+        <p>Stencil *UCK across the chest, DONALD TRUMP under it, the duck breaking out of the K. Readable from across a parking lot.</p>
         <p>Pick the color that gets the biggest reaction from your uncle at Thanksgiving.</p>
         <ul class="specs label">
-          <li><span>Colors</span><span class="swatches" aria-label="White, Yellow, Orange"><b style="background:#fff"></b><b style="background:var(--duck)"></b><b style="background:var(--hazard)"></b></span></li>
-          <li><span>Style</span><span>Unisex tee</span></li>
-          <li><span>Printed by</span><span>Printful</span></li>
+          <li><span>Price</span><span>$32</span></li>
+          <li><span>Colors</span><span class="swatches" aria-label="Terracotta, Butter, White"><b style="background:#ff9364"></b><b style="background:#ffe09e"></b><b style="background:#fff"></b></span></li>
+          <li><span>Blank</span><span>Comfort Colors 1717</span></li>
           <li><span>Per shirt</span><span>$5 to Democracy Forward</span></li>
         </ul>
-        <a class="block-link" href="https://duckdonaldtrump.printful.me/product/uck-donald-trump-t-shirt">Shop the shirt</a>
+        <a class="block-link" href="https://duckdonaldtrump.printful.me/product/unisex-garment-dyed-heavyweight-t-shirt">Shop the big stencil</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="product product--flip wrap" id="shirt-2">
+    <div class="p-grid">
+      <div class="p-img">
+        <picture><source type="image/webp" srcset="images/tee-front-back-back-600.webp 600w, images/tee-front-back-back-1000.webp 1000w" sizes="(max-width: 860px) 100vw, 58vw"><img src="images/tee-front-back-back-1000.webp" alt="Back of a terracotta tee with *UCK DONALD TRUMP stacked in stencil and MAKE QUACKS, NOT CHAOS under it" width="1000" height="1000" loading="lazy" decoding="async"></picture>
+        <picture class="p-inset"><source type="image/webp" srcset="images/tee-front-back-front-600.webp"><img src="images/tee-front-back-front-600.webp" alt="Front of the same tee with a small duck sticker on the left chest" width="600" height="600" loading="lazy" decoding="async"></picture>
+      </div>
+      <div class="p-copy">
+        <span class="label">02 / The quiet one</span>
+        <h2>Small duck, big back.</h2>
+        <p>A sticker-sized duck on the chest. The full statement on the back, for the people behind you in line.</p>
+        <p>Same shirt, printed both sides.</p>
+        <ul class="specs label">
+          <li><span>Price</span><span>$38</span></li>
+          <li><span>Colors</span><span class="swatches" aria-label="Terracotta, Butter, White"><b style="background:#ff9364"></b><b style="background:#ffe09e"></b><b style="background:#fff"></b></span></li>
+          <li><span>Blank</span><span>Comfort Colors 1717</span></li>
+          <li><span>Per shirt</span><span>$5 to Democracy Forward</span></li>
+        </ul>
+        <a class="block-link" href="https://duckdonaldtrump.printful.me/product/uck-donald-trump-tee-front-and-back">Shop front and back</a>
       </div>
     </div>
   </section>
 
   <section class="manifesto" id="why">
     <div class="wrap m-grid">
-      <span class="label">02 / Why a duck</span>
+      <span class="label">03 / Why a duck</span>
       <h2>The duck <em>stops</em> here.</h2>
       <div class="m-body">
         <p>Outrage is cheap and everybody is tired of it.</p>
@@ -378,7 +420,7 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
   <section class="faq wrap" id="faq">
     <div class="f-grid">
       <div class="f-head"><div class="inner">
-        <span class="label">03 / Questions</span>
+        <span class="label">04 / Questions</span>
         <h2>Frequently asked quacktions.</h2>
       </div></div>
       <div class="f-list">
