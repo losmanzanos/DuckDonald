@@ -211,7 +211,7 @@ a{color:inherit}
 }
 .p-img img{position:relative;z-index:1;width:100%}
 .p-copy{grid-column:9 / span 4;padding-top:clamp(0px,4vw,60px)}
-.p-copy h2,.faq h2,.coin h2{
+.p-copy h2,.faq h2{
   font-family:var(--display);font-weight:900;text-transform:uppercase;
   line-height:.88;margin:.35em 0 .4em;
   font-size:clamp(3rem,6vw,5.5rem);
@@ -280,37 +280,6 @@ details p{margin:-6px 0 24px 3.2em;max-width:52ch}
   .f-head,.f-list{grid-column:1 / -1}
 }
 
-/* ---------- coin ---------- */
-.coin{padding-bottom:clamp(90px,12vw,160px)}
-.ticket{
-  max-width:880px;margin-left:auto;
-  background:var(--paper-2);
-  border:2px solid var(--ink);
-  transform:rotate(-1.2deg);
-  position:relative;
-}
-.ticket-top{display:flex;justify-content:space-between;padding:12px 20px;border-bottom:2px dashed var(--ink)}
-.ticket-body{padding:clamp(22px,4vw,44px)}
-.coin h2{margin-top:0;color:var(--ink)}
-.coin h2 span{color:var(--hazard)}
-.ca{
-  display:flex;gap:0;margin:26px 0 22px;
-  border:2px solid var(--ink);
-}
-.ca code{
-  flex:1;min-width:0;
-  font-family:var(--mono);font-size:clamp(.78rem,1.6vw,1rem);
-  padding:14px;overflow-wrap:anywhere;background:#fff;
-}
-.ca button{
-  font-family:var(--mono);font-weight:700;text-transform:uppercase;font-size:.85rem;
-  background:var(--duck);color:var(--ink);border:0;border-left:2px solid var(--ink);
-  padding:0 18px;cursor:pointer;
-}
-.ca button:hover{background:var(--hazard)}
-.coin .go{font-size:clamp(1.4rem,2.6vw,2rem)}
-.fine{font-family:var(--mono);font-size:.78rem;margin:28px 0 0;opacity:.8}
-
 /* ---------- footer ---------- */
 footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
 .f-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 40px}
@@ -341,7 +310,6 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
       <a href="#shirt">The shirt</a>
       <a href="#why">Why</a>
       <a href="#faq">FAQ</a>
-      <a href="#coin">$DUCKTRUMP</a>
       <a class="shop" href="https://duckdonaldtrump.printful.me/product/uck-donald-trump-t-shirt">Shop</a>
     </nav>
   </div>
@@ -427,28 +395,13 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
           <p>$5 from every shirt goes to <a href="https://democracyforward.org/donate/" rel="noopener">Democracy Forward Foundation</a>, a 501(c)(3) legal nonprofit that takes the Trump administration to court when it breaks the law. Lawyers are slower than tweets. They also win more.</p>
         </details>
         <details>
-          <summary><span class="n">04</span><span>Can I get more involved?</span></summary>
-          <p>Yes. There's a token. Scroll down.</p>
+          <summary><span class="n">04</span><span>Can I do more than buy a shirt?</span></summary>
+          <p>Wear it somewhere people will see it, post a photo, and tag us. Or skip the shirt and <a href="https://democracyforward.org/donate/" rel="noopener">give to Democracy Forward directly</a>. Both work.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <section class="coin wrap" id="coin">
-    <div class="ticket">
-      <div class="ticket-top label"><span>04 / On-chain</span><span>Solana</span></div>
-      <div class="ticket-body">
-        <h2><span>$</span>DUCKTRUMP</h2>
-        <p>Duck Donald Trump is also a Solana token, for anyone who wants the joke on their wallet too. Trade it with the contract address below or go straight to the trading page.</p>
-        <div class="ca">
-          <code id="ca">4BJgF3cdjAZ4Ho3WaGBfmtZnZnnuaTRjf4C2VKeVpump</code>
-          <button type="button" id="copy">Copy</button>
-        </div>
-        <a class="go" href="https://pump.fun/coin/4BJgF3cdjAZ4Ho3WaGBfmtZnZnnuaTRjf4C2VKeVpump">Trade on pump.fun</a>
-        <p class="fine">Meme coins are volatile and can go to zero. Nothing on this page is financial advice.</p>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -468,20 +421,6 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
 <script>
 (function(){
   var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
-  var b=document.getElementById('copy'), c=document.getElementById('ca');
-  if(!b||!c) return;
-  b.addEventListener('click',function(){
-    var t=c.textContent.trim();
-    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(t).then(done,function(){fallback(t);done()});
-    } else { fallback(t); done(); }
-  });
-  function fallback(t){
-    var r=document.createRange(); r.selectNodeContents(c);
-    var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    try{document.execCommand('copy')}catch(e){}
-  }
 })();
 </script>
 </body>

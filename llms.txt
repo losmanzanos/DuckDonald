@@ -4,7 +4,7 @@
 
 ## Pages
 
-- [Home](https://duckdonaldtrump.com/): the shirt, why it exists, FAQ, and the $DUCKTRUMP Solana token
+- [Home](https://duckdonaldtrump.com/): the shirt, why it exists, FAQ
 - [Shop the shirt](https://duckdonaldtrump.printful.me/product/uck-donald-trump-t-shirt): checkout, sizes, and colors on Printful
 
 ## Donations
