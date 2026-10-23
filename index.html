@@ -81,12 +81,30 @@
     },
     {
       "@type": "Product",
-      "name": "*uck Trucker Hat",
-      "image": "https://duckdonaldtrump.com/images/hat-front-1000.webp",
-      "description": "Comfort Colors sunwashed trucker cap with *UCK embroidered across the front in black and orange thread. Butter or Ivory. $5 from every hat goes to Democracy Forward Foundation.",
+      "name": "Make Quacks Not Chaos Snapback",
+      "image": "https://duckdonaldtrump.com/images/hat-snapback-900.webp",
+      "description": "Red flat-bill snapback with MAKE QUACKS NOT CHAOS embroidered in white. $5 from every hat goes to Democracy Forward Foundation.",
       "brand": {"@id": "https://duckdonaldtrump.com/#org"},
-      "color": "Butter, Ivory",
-      "offers": {"@type": "Offer", "url": "https://duckdonaldtrump.printful.me/product/uck-trucker-hat", "price": "28.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}
+      "color": "Red",
+      "offers": {"@type": "Offer", "url": "https://duckdonaldtrump.printful.me/product/make-quacks-not-chaos-snapback", "price": "30.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}
+    },
+    {
+      "@type": "Product",
+      "name": "Asterisk Beanie",
+      "image": "https://duckdonaldtrump.com/images/hat-beanie-900.webp",
+      "description": "Black cuffed knit beanie with one orange asterisk embroidered on the cuff. $5 from every hat goes to Democracy Forward Foundation.",
+      "brand": {"@id": "https://duckdonaldtrump.com/#org"},
+      "color": "Black",
+      "offers": {"@type": "Offer", "url": "https://duckdonaldtrump.printful.me/product/asterisk-beanie", "price": "26.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}
+    },
+    {
+      "@type": "Product",
+      "name": "Quack Corduroy Dad Hat",
+      "image": "https://duckdonaldtrump.com/images/hat-corduroy-900.webp",
+      "description": "Brown corduroy dad hat with quack embroidered in white lowercase serif. $5 from every hat goes to Democracy Forward Foundation.",
+      "brand": {"@id": "https://duckdonaldtrump.com/#org"},
+      "color": "Brown",
+      "offers": {"@type": "Offer", "url": "https://duckdonaldtrump.printful.me/product/quack-corduroy-dad-hat", "price": "30.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition"}
     },
     {
       "@type": "FAQPage",
@@ -104,6 +122,7 @@
 @font-face{font-family:"Big Shoulders Stencil Display";font-weight:800 900;font-style:normal;font-display:swap;src:url(fonts/big-shoulders-stencil-display.woff2) format("woff2")}
 @font-face{font-family:"Big Shoulders Display";font-weight:700 900;font-style:normal;font-display:swap;src:url(fonts/big-shoulders-display.woff2) format("woff2")}
 @font-face{font-family:"Familjen Grotesk";font-weight:400 700;font-style:normal;font-display:swap;src:url(fonts/familjen-grotesk.woff2) format("woff2")}
+@font-face{font-family:"Young Serif";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/young-serif.woff2) format("woff2")}
 @font-face{font-family:"Courier Prime";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/courier-prime-400.woff2) format("woff2")}
 @font-face{font-family:"Courier Prime";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/courier-prime-700.woff2) format("woff2")}
 :root{
@@ -275,6 +294,43 @@ a{color:inherit}
   .p-copy{padding-top:56px}
 }
 
+/* ---------- hats ---------- */
+.hats{padding-block:clamp(70px,10vw,140px) clamp(40px,6vw,80px)}
+.hats-head{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:28px;margin-bottom:clamp(36px,5vw,64px)}
+.hats-head>div{grid-column:1 / span 6}
+.hats-head h2{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.88;margin:.35em 0 0;font-size:clamp(3rem,6vw,5.5rem)}
+.hats-head p{grid-column:8 / span 5;margin:0;font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:36ch}
+.hat-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(28px,3vw,44px) 20px;align-items:start}
+.hat--loud{grid-column:1 / span 6}
+.hat--mid{grid-column:7 / span 3;padding-left:8px;margin-top:clamp(0px,8vw,120px)}
+.hat--quiet{grid-column:10 / span 3;margin-top:clamp(0px,16vw,240px)}
+.hat-img{display:block;position:relative;margin-bottom:18px}
+.hat-img::before{content:"";position:absolute;inset:4% -12px -12px 4%;z-index:0}
+.hat--loud .hat-img::before{background:var(--hazard)}
+.hat--mid .hat-img::before{background:var(--ink)}
+.hat--quiet .hat-img::before{background:#70453b}
+.hat-img picture,.hat-img img{position:relative;z-index:1;display:block;width:100%;border:1px solid var(--ink)}
+.hat-img:hover img{transform:translate(-3px,-3px)}
+.hat-img img{transition:transform .15s ease}
+.hat h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:.95;margin:10px 0 10px}
+.hat--quiet h3{text-transform:none;font-family:"Young Serif",Georgia,serif;font-weight:400}
+.hat p{margin:0 0 16px}
+.hat--loud p{max-width:46ch}
+.vol{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.vol .cells{display:flex;gap:3px;flex:1}
+.vol i{display:block;height:12px;flex:1;border:1px solid var(--ink);background:transparent}
+.vol i.on{background:var(--hazard)}
+.hat--mid .vol i.on{background:var(--ink)}
+.hat--quiet .vol i.on{background:#70453b}
+.notice{margin:8px 0 0 !important;font-size:.75rem}
+.hat-buy{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.price{font-family:var(--display);font-weight:900;font-size:1.8rem}
+.hat .go{font-size:clamp(1.2rem,1.8vw,1.5rem)}
+@media (max-width:860px){
+  .hats-head>div,.hats-head p{grid-column:1 / -1}
+  .hat--loud,.hat--mid,.hat--quiet{grid-column:1 / -1;margin-top:0}
+}
+@media (prefers-reduced-motion:reduce){.hat-img img{transition:none}}
 /* ---------- manifesto ---------- */
 .manifesto{background:var(--ink);color:var(--paper-2);padding:clamp(80px,12vw,170px) 0}
 .m-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:0 20px}
@@ -347,7 +403,7 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
     <nav class="label">
       <a href="#shirt">Tees</a>
       <a href="#hoodie">Hoodie</a>
-      <a href="#hat">Hat</a>
+      <a href="#hats">Hats</a>
       <a href="#why">Why</a>
       <a href="#faq">FAQ</a>
       <a class="shop" href="https://duckdonaldtrump.printful.me/">Shop</a>
@@ -444,23 +500,36 @@ footer{border-top:2px solid var(--ink);padding:36px 0 0;overflow:hidden}
     </div>
   </section>
 
-  <section class="product product--flip wrap" id="hat">
-    <div class="p-grid">
-      <div class="p-img">
-        <picture><source type="image/webp" srcset="images/hat-front-600.webp 600w, images/hat-front-1000.webp 1000w" sizes="(max-width: 860px) 100vw, 58vw"><img src="images/hat-front-1000.webp" alt="Butter yellow trucker hat with *UCK embroidered across the front in black and orange thread" width="1000" height="1000" loading="lazy" decoding="async"></picture>
+  <section class="hats wrap" id="hats">
+    <div class="hats-head">
+      <div>
+        <span class="label">04 / Hats</span>
+        <h2>Pick your volume.</h2>
       </div>
-      <div class="p-copy">
-        <span class="label">04 / Four letters</span>
-        <h2>The hat.</h2>
-        <p>Just the word. Stitched, not printed, so it outlasts the hat. Garment-dyed front, mesh back, snapback.</p>
-        <ul class="specs label">
-          <li><span>Price</span><span>$28</span></li>
-          <li><span>Colors</span><span class="swatches" aria-label="Butter, Ivory"><b style="background:#ffe09e"></b><b style="background:#fff4d9"></b></span></li>
-          <li><span>Blank</span><span>Comfort Colors trucker</span></li>
-          <li><span>Per hat</span><span>$5 to Democracy Forward</span></li>
-        </ul>
-        <a class="block-link" href="https://duckdonaldtrump.printful.me/product/uck-trucker-hat">Shop the hat</a>
-      </div>
+      <p>Three hats, sorted by how fast your uncle figures it out. All embroidered. All $5 to Democracy Forward.</p>
+    </div>
+    <div class="hat-grid">
+      <article class="hat hat--loud">
+        <a class="hat-img" href="https://duckdonaldtrump.printful.me/product/make-quacks-not-chaos-snapback"><picture><source type="image/webp" srcset="images/hat-snapback-500.webp 500w, images/hat-snapback-900.webp 900w" sizes="(max-width: 860px) 100vw, 50vw"><img src="images/hat-snapback-900.webp" alt="Red snapback with MAKE QUACKS NOT CHAOS embroidered in white" width="900" height="900" loading="lazy" decoding="async"></picture></a>
+        <div class="vol" role="img" aria-label="Volume 10 out of 10"><span class="label">Volume</span><span class="cells"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="label">10/10</span></div><p class="notice label">Uncle notices: from the parking lot</p>
+        <h3>Make Quacks Not Chaos</h3>
+        <p>From across the street it looks like his hat. Up close it's a duck joke. Somewhere in between, a guy at the gas station does a double take, and that's the whole product.</p>
+        <div class="hat-buy"><span class="price">$30</span><a class="go" href="https://duckdonaldtrump.printful.me/product/make-quacks-not-chaos-snapback">Get the red one</a></div>
+      </article>
+      <article class="hat hat--mid">
+        <a class="hat-img" href="https://duckdonaldtrump.printful.me/product/asterisk-beanie"><picture><source type="image/webp" srcset="images/hat-beanie-500.webp 500w, images/hat-beanie-900.webp 900w" sizes="(max-width: 860px) 100vw, 25vw"><img src="images/hat-beanie-900.webp" alt="Black cuffed beanie with a single orange asterisk embroidered on the cuff" width="900" height="900" loading="lazy" decoding="async"></picture></a>
+        <div class="vol" role="img" aria-label="Volume 5 out of 10"><span class="label">Volume</span><span class="cells"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span><span class="label">5/10</span></div><p class="notice label">Uncle notices: if you explain it</p>
+        <h3>The Asterisk</h3>
+        <p>One orange asterisk. No words. People who know, know. Everyone else just thinks your head is warm.</p>
+        <div class="hat-buy"><span class="price">$26</span><a class="go" href="https://duckdonaldtrump.printful.me/product/asterisk-beanie">Get the beanie</a></div>
+      </article>
+      <article class="hat hat--quiet">
+        <a class="hat-img" href="https://duckdonaldtrump.printful.me/product/quack-corduroy-dad-hat"><picture><source type="image/webp" srcset="images/hat-corduroy-500.webp 500w, images/hat-corduroy-900.webp 900w" sizes="(max-width: 860px) 100vw, 25vw"><img src="images/hat-corduroy-900.webp" alt="Brown corduroy dad hat with the word quack embroidered in white lowercase serif" width="900" height="900" loading="lazy" decoding="async"></picture></a>
+        <div class="vol" role="img" aria-label="Volume 1 out of 10"><span class="label">Volume</span><span class="cells"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="label">1/10</span></div><p class="notice label">Uncle notices: never</p>
+        <h3>quack</h3>
+        <p>Brown corduroy. Lowercase. Your aunt thinks it's about birds. Let her.</p>
+        <div class="hat-buy"><span class="price">$30</span><a class="go" href="https://duckdonaldtrump.printful.me/product/quack-corduroy-dad-hat">Get the quiet one</a></div>
+      </article>
     </div>
   </section>
 
